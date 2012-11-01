@@ -1,4 +1,4 @@
 aReporter
 =========
 
-Activity reporter
+Activity reporter for invoicing purpouses in GDEV
