@@ -1,0 +1,44 @@
+{namespace aReporter.tickets.templates autoescape="contextual"}
+
+
+/**
+ * Tickets template
+ * @param tickets
+ */
+{template .tickets}
+	<h3>Stacked tickets</h3>
+    <ul class="nav nav-tabs nav-stacked">
+    	{foreach $ticket in $tickets}
+        {call .ticket data="$ticket" /}
+      {/foreach}
+		</ul>
+{/template}
+
+/**
+ * Ticket template
+ * @param clientId
+ * @param active
+ * @param title
+ */
+{template .ticket}
+	<li class="{if $active}active{/if}" client-id="{$clientId}">
+		<a href="#navs">
+			<i class="icon-file"></i>{$title}
+		</a>
+		<button class="destroy"></button>
+	</li>
+{/template}
+
+/**
+ * Ticket form template
+ */
+{template .addTicketFrm}
+  <form class="navbar-form pull-left">
+    <label><i class="icon-search"></i>Ticket id</label>
+    <input type="text" id="ticket-id-fld" placeholder="Type ticket id">
+    <button type="submit" id="add-ticket-btn" class="btn btn-inverse">
+    	<i class="icon-plus-sign icon-white"></i> Add
+    </button>
+  </form>
+{/template}
+

@@ -1,0 +1,84 @@
+{namespace aReporter.layout.templates autoescape="contextual"}
+
+
+/**
+ * Element template.
+ * @param tickets
+ * @param ticketsLength
+ * @param creationDate
+ */
+{template .element}
+    <div class="container-fluid">
+   	  {call .navbar data="all" /}	
+      {call .metaInfo data="all" /} 
+      <div class="row-fluid">
+     	  <div class="span3">
+    		  {call aReporter.tickets.templates.addTicketFrm data="all" /}	
+    			{if $ticketsLength}
+    			  {call aReporter.tickets.templates.tickets data="all" /}
+    			{/if} 
+    		</div><!--/span-->
+        <div class="span9">
+        bla
+        </div><!--/span-->
+      </div><!--/.row-fluid-->
+      {call .footer data="all" /}
+    </div><!--/.fluid-container-->
+{/template}
+
+
+/**
+* Static navbar template
+*/
+{template .navbar}
+ <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Activity reporter</a>
+          <div class="nav-collapse collapse">
+
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">T911552</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+{/template}
+
+/**
+* Meta information template
+*/
+{template .metaInfo}
+  <div class="row-fluid">
+    <div class="span8">
+      <h2>Write what you have done</h2>
+    </div><!--/span-->
+    <div class="span4">
+      <div class="well well-small">
+       <p><span class="label label-info">Hrs this week</span>
+       <p><span class="label label-important">Hrs this month</span>
+      </div>
+     </div><!--/span-->
+  </div><!--/row-->
+{/template} 
+
+/**
+* footer template
+* @param creationDate
+*/
+{template .footer}
+  <hr>
+  <footer>
+    <p>&copy; Ivan Doležal {$creationDate}</p>
+  </footer>
+{/template}
