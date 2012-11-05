@@ -4,7 +4,7 @@
   @fileoverview goog.history.Html5History default behavior is that setToken
   replaces pathname of current location, but keeps search query as is.
 
-  This transformer treats tokens as efn47v2hm63h1efn47v2hm63h; hence they may also include
+  This transformer treats tokens as s3j7lgxd4ruz1s3j7lgxd4ruz; hence they may also include
   query string and a query string is replaced when a new history state is
   pushed.
 */

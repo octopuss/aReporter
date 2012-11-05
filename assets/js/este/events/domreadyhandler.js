@@ -3,7 +3,7 @@
 /**
   @fileoverview DomReady ported from jQuery. IE workaround does not work in
   frame so there is no need to inject document. Ready event is fired once.
-  .. listen este.events.domReady, efn47v2hm63h1efn47v2hm63h, (e) ->
+  .. listen este.events.domReady, s3j7lgxd4ruz1s3j7lgxd4ruz, (e) ->
   Manually tested.
 */
 

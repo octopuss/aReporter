@@ -9,7 +9,7 @@ goog.provide('este.uri.utils');
 goog.require('goog.uri.utils');
 
 /**
-  Returns efn47v2hm63h3efn47v2hm63h from the URL - i.e. excludes protocol, host, port and fragment
+  Returns s3j7lgxd4ruz3s3j7lgxd4ruz from the URL - i.e. excludes protocol, host, port and fragment
   @param {string} uri
 */
 

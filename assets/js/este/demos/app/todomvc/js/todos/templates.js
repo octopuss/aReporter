@@ -33,11 +33,11 @@ este.demos.app.todomvc.todos.templates.header = function(opt_data) {
  */
 este.demos.app.todomvc.todos.templates.main = function(opt_data) {
   var output = '<section id="main"><input ' + ((opt_data.remainingCount == 0) ? 'checked' : '') + ' id="toggle-all" type="checkbox"><label for="toggle-all">Mark all as complete</label><ul id="todo-list">';
-  var todoList62 = opt_data.todos;
-  var todoListLen62 = todoList62.length;
-  for (var todoIndex62 = 0; todoIndex62 < todoListLen62; todoIndex62++) {
-    var todoData62 = todoList62[todoIndex62];
-    output += este.demos.app.todomvc.todos.templates.todo(todoData62);
+  var todoList104 = opt_data.todos;
+  var todoListLen104 = todoList104.length;
+  for (var todoIndex104 = 0; todoIndex104 < todoListLen104; todoIndex104++) {
+    var todoData104 = todoList104[todoIndex104];
+    output += este.demos.app.todomvc.todos.templates.todo(todoData104);
   }
   output += '</ul></section>';
   return output;

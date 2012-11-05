@@ -5,21 +5,26 @@
  * Element template.
  * @param tickets
  * @param ticketsLength
+ * @param activities
+ * @param activitiesLength
  * @param creationDate
  */
 {template .element}
     <div class="container-fluid">
-   	  {call .navbar data="all" /}	
-      {call .metaInfo data="all" /} 
+   	  {call .navbar data="all" /}
+      {call .metaInfo data="all" /}
       <div class="row-fluid">
      	  <div class="span3">
-    		  {call aReporter.tickets.templates.addTicketFrm data="all" /}	
+    		  {call aReporter.tickets.templates.addTicketFrm data="all" /}
     			{if $ticketsLength}
     			  {call aReporter.tickets.templates.tickets data="all" /}
-    			{/if} 
+    			{/if}
     		</div><!--/span-->
         <div class="span9">
-        bla
+        {call aReporter.activities.templates.addActivityForm data="all" /}
+        {if $activitiesLength}
+          {call aReporter.activities.templates.activities data="all" /}
+        {/if}
         </div><!--/span-->
       </div><!--/.row-fluid-->
       {call .footer data="all" /}
@@ -70,7 +75,7 @@
       </div>
      </div><!--/span-->
   </div><!--/row-->
-{/template} 
+{/template}
 
 /**
 * footer template

@@ -14,9 +14,9 @@ goog.require('soy');
 aReporter.templates.callToAction = function(opt_data) {
   var output = '';
   /** @desc text in some div calling to action */
-  var MSG_UNNAMED_145 = goog.getMsg(
+  var MSG_UNNAMED_194 = goog.getMsg(
       '{$action} on me',
       {'action': soy.$$escapeHtml(opt_data.action)});
-  output += MSG_UNNAMED_145;
+  output += MSG_UNNAMED_194;
   return output;
 };

@@ -5,6 +5,7 @@ goog.provide 'aReporter.layout.View'
 
 goog.require 'este.app.View'
 goog.require 'aReporter.domain.Tickets'
+goog.require 'aReporter.domain.Activities'
 goog.require 'aReporter.layout.templates'
 
 class aReporter.layout.View extends este.app.View
@@ -16,15 +17,15 @@ class aReporter.layout.View extends este.app.View
   constructor: ->
     super()
 
- 
+
   ###*
-    @type {aReporter.Tickets}
+    @type {aReporter.domain.Tickets}
     @protected
   ###
   tickets: null
 
    ###*
-    @type {aReporter.Activities}
+    @type {aReporter.domain.Activities}
     @protected
   ###
   activities: null
@@ -38,9 +39,11 @@ class aReporter.layout.View extends este.app.View
   load: (params) ->
     if !@tickets
       @tickets = new aReporter.domain.Tickets
-      return @localStorage.query @tickets
+    if !@activities
+      @activities = new aReporter.domain.Activities
+      return @localStorage.query @activities, @tickets
     super()
-    
+
   ###*
     @inheritDoc
   ###
@@ -54,9 +57,14 @@ class aReporter.layout.View extends este.app.View
   ###
   update:->
     ticket = new aReporter.domain.Ticket title:'aaa', active:true
+    activity = new aReporter.domain.Activity
     @tickets.add ticket
+    @activities.add activity
     json =
       tickets: @tickets
       ticketsLength: @tickets.getLength()
+      activities: @activities
+      activitiesLength:@activities.getLength()
+      activityTypes: activity.getActivityTypesList()
     html = aReporter.layout.templates.element json
     @mergeHtml html

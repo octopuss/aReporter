@@ -12,6 +12,8 @@ goog.require('este.app.View');
 
 goog.require('aReporter.domain.Tickets');
 
+goog.require('aReporter.domain.Activities');
+
 goog.require('aReporter.layout.templates');
 
 
@@ -31,7 +33,7 @@ goog.require('aReporter.layout.templates');
   goog.inherits(aReporter.layout.View, este.app.View);
 
   /**
-    @type {aReporter.Tickets}
+    @type {aReporter.domain.Tickets}
     @protected
   */
 
@@ -39,7 +41,7 @@ goog.require('aReporter.layout.templates');
   aReporter.layout.View.prototype.tickets = null;
 
   /**
-   @type {aReporter.Activities}
+   @type {aReporter.domain.Activities}
    @protected
   */
 
@@ -57,7 +59,10 @@ goog.require('aReporter.layout.templates');
   aReporter.layout.View.prototype.load = function(params) {
     if (!this.tickets) {
       this.tickets = new aReporter.domain.Tickets;
-      return this.localStorage.query(this.tickets);
+    }
+    if (!this.activities) {
+      this.activities = new aReporter.domain.Activities;
+      return this.localStorage.query(this.activities, this.tickets);
     }
     return aReporter.layout.View.superClass_.load.call(this);
   };
@@ -79,15 +84,20 @@ goog.require('aReporter.layout.templates');
 
 
   aReporter.layout.View.prototype.update = function() {
-    var html, json, ticket;
+    var activity, html, json, ticket;
     ticket = new aReporter.domain.Ticket({
       title: 'aaa',
       active: true
     });
+    activity = new aReporter.domain.Activity;
     this.tickets.add(ticket);
+    this.activities.add(activity);
     json = {
       tickets: this.tickets,
-      ticketsLength: this.tickets.getLength()
+      ticketsLength: this.tickets.getLength(),
+      activities: this.activities,
+      activitiesLength: this.activities.getLength(),
+      activityTypes: activity.getActivityTypesList()
     };
     html = aReporter.layout.templates.element(json);
     return this.mergeHtml(html);

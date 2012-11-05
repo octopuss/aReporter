@@ -13,11 +13,11 @@ goog.require('soy');
  */
 aReporter.tickets.templates.tickets = function(opt_data) {
   var output = '\t<h3>Stacked tickets</h3><ul class="nav nav-tabs nav-stacked">';
-  var ticketList31 = opt_data.tickets;
-  var ticketListLen31 = ticketList31.length;
-  for (var ticketIndex31 = 0; ticketIndex31 < ticketListLen31; ticketIndex31++) {
-    var ticketData31 = ticketList31[ticketIndex31];
-    output += aReporter.tickets.templates.ticket(ticketData31);
+  var ticketList73 = opt_data.tickets;
+  var ticketListLen73 = ticketList73.length;
+  for (var ticketIndex73 = 0; ticketIndex73 < ticketListLen73; ticketIndex73++) {
+    var ticketData73 = ticketList73[ticketIndex73];
+    output += aReporter.tickets.templates.ticket(ticketData73);
   }
   output += '</ul>';
   return output;
@@ -30,7 +30,7 @@ aReporter.tickets.templates.tickets = function(opt_data) {
  * @notypecheck
  */
 aReporter.tickets.templates.ticket = function(opt_data) {
-  return '\t<li class="' + ((opt_data.active) ? 'active' : '') + '" client-id="' + soy.$$escapeHtmlAttribute(opt_data.clientId) + '"><a href="#navs"><i class="icon-file"></i>' + soy.$$escapeHtml(opt_data.title) + '</a><button class="destroy"></button></li>';
+  return '\t<li class="' + ((opt_data.active) ? 'active' : '') + '" client-id="' + soy.$$escapeHtmlAttribute(opt_data.clientId) + '"><a href="#navs"><i class="icon-file"></i>' + soy.$$escapeHtml(opt_data.title) + '</a><button class="unlist"></button></li>';
 };
 
 

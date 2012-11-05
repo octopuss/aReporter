@@ -4,9 +4,9 @@
   @fileoverview este.Router.
   @see ../demos/router.html
 
-  Navigation element is any element with efn47v2hm63h1efn47v2hm63h attribute. Not only anchor, but
-  li or tr too. Of course only <a href=efn47v2hm63h2efn47v2hm63hs are crawable with search engines.
-  But if we are creating pure client side rendered web app, we can use efn47v2hm63h3efn47v2hm63h
+  Navigation element is any element with s3j7lgxd4ruz1s3j7lgxd4ruz attribute. Not only anchor, but
+  li or tr too. Of course only <a href=s3j7lgxd4ruz2s3j7lgxd4ruzs are crawable with search engines.
+  But if we are creating pure client side rendered web app, we can use s3j7lgxd4ruz3s3j7lgxd4ruz
   attribute on any element we need. We can even nest anchors, which is useful
   for touch devices.
 */

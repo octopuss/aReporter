@@ -5,7 +5,7 @@
   Useful for mobile development. It also shows total count of registered
   listeners. It's useful to see it and be sure, that app does not leak.
   ex.
-    mlog efn47v2hm63h1efn47v2hm63h
+    mlog s3j7lgxd4ruz1s3j7lgxd4ruz
 */
 
 

@@ -1,5 +1,5 @@
 ###*
-  @fileoverview este.demos.app.todomvc.todo.Model.
+  @fileoverview aReporter.domain.Activity.
 ###
 goog.provide 'aReporter.domain.Activity'
 
@@ -17,12 +17,19 @@ class aReporter.domain.Activity extends este.Model
 
   ###*
     Activity types enumeration
-  ###  
-  ActivityType = 
+    @enum  {String}
+  ###
+  ActivityTypeEnum =
     PROGRAMMING : 'Programming'
     COMMUNICATION : 'Communication'
     TESTING : 'Testing'
     OTHER : 'Other'
+
+  ###*
+    Activity type
+  ###
+  activityType:ActivityTypeEnum
+
   ###*
     @inheritDoc
   ###
@@ -32,7 +39,7 @@ class aReporter.domain.Activity extends este.Model
     'date': new Date
     'title':''
     'description':''
-    'type':ActivityType.PROGRAMMING
+    'type':ActivityTypeEnum.PROGRAMMING
     'invoiced':true
 
   ###*
@@ -44,13 +51,11 @@ class aReporter.domain.Activity extends este.Model
       'validators':
         'required': este.model.validators.required
     'hours':
-      'set': este.model.setters.trim
       'validators':
         'required': este.model.validators.required
-    'date':
-      'validators':
-        'required': este.model.validators.required       
 
   calculateMD: ->
     hrs = @get 'hours'
     @set md hrs / 8
+  getActivityTypesList:->
+    return ActivityTypeEnum.getValues

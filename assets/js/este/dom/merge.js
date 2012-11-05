@@ -12,7 +12,7 @@
     then clone is merged with element, see mergeInternal
     only changed elements are touched
 
-  este.dom.merge el, efn47v2hm63h1efn47v2hm63h
+  este.dom.merge el, s3j7lgxd4ruz1s3j7lgxd4ruz
 
   todo
     tests (manually in IE and Gecko)

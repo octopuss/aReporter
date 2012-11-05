@@ -31,9 +31,9 @@ goog.require('este.json');
 
   /**
     @param {goog.Uri|string} uri The Uri of the server side code that receives
-    data posted through this channel (e.g., efn47v2hm63h6efn47v2hm63h).
+    data posted through this channel (e.g., s3j7lgxd4ruz6s3j7lgxd4ruz).
     @param {string=} opt_callbackParamName The parameter name that is used to
-    specify the callback. Defaults to efn47v2hm63h7efn47v2hm63h.
+    specify the callback. Defaults to s3j7lgxd4ruz7s3j7lgxd4ruz.
   */
 
 

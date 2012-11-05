@@ -8,11 +8,11 @@
   invoked rather than opt_replyCallback.
 
   Example success JSONP response:
-    callback_function({efn47v2hm63h1efn47v2hm63h:efn47v2hm63h2efn47v2hm63h});
-    callback_function({efn47v2hm63h3efn47v2hm63h:efn47v2hm63h4efn47v2hm63h}, 200);
+    callback_function({s3j7lgxd4ruz1s3j7lgxd4ruz:s3j7lgxd4ruz2s3j7lgxd4ruz});
+    callback_function({s3j7lgxd4ruz3s3j7lgxd4ruz:s3j7lgxd4ruz4s3j7lgxd4ruz}, 200);
 
   Example failure JSONP response:
-    callback_function({efn47v2hm63h5efn47v2hm63h:efn47v2hm63h6efn47v2hm63h}, 500);
+    callback_function({s3j7lgxd4ruz5s3j7lgxd4ruz:s3j7lgxd4ruz6s3j7lgxd4ruz}, 500);
 
   Background
     This is needed as all JSONP responses must be sent with 200 HTTP status
@@ -38,9 +38,9 @@ goog.require('goog.net.Jsonp');
   /**
     @param {goog.Uri|string} uri The Uri of the server side code that receives
        data posted through this channel (e.g.,
-       efn47v2hm63h9efn47v2hm63h).
+       s3j7lgxd4ruz9s3j7lgxd4ruz).
     @param {string=} opt_callbackParamName The parameter name that is used to specify the callback.
-      Defaults to efn47v2hm63h10efn47v2hm63h.
+      Defaults to s3j7lgxd4ruz10s3j7lgxd4ruz.
     @constructor
     @extends {goog.net.Jsonp}
   */

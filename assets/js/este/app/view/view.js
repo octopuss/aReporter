@@ -49,8 +49,8 @@ goog.require('goog.i18n.pluralRules');
   };
 
   /**
-    Url has to always start with efn47v2hm63h10efn47v2hm63h prefix. If html5 is not supported, then
-    urls will be converted to efn47v2hm63h11efn47v2hm63h prefix. If url == efn47v2hm63h12efn47v2hm63h, then view is not url
+    Url has to always start with s3j7lgxd4ruz10s3j7lgxd4ruz prefix. If html5 is not supported, then
+    urls will be converted to s3j7lgxd4ruz11s3j7lgxd4ruz prefix. If url == s3j7lgxd4ruz12s3j7lgxd4ruz, then view is not url
     projected.
     Various url definitions: este/assets/js/este/router/route_test.coffee
     @type {string}
@@ -140,8 +140,8 @@ goog.require('goog.i18n.pluralRules');
   /**
     Defer passed method execution after current call stack.
     ex.
-      defer -> alert efn47v2hm63h15efn47v2hm63h
-      alert efn47v2hm63h16efn47v2hm63h
+      defer -> alert s3j7lgxd4ruz15s3j7lgxd4ruz
+      alert s3j7lgxd4ruz16s3j7lgxd4ruz
     todo: refactor into este.functions.defer
     @param {Function} fn
     @protected

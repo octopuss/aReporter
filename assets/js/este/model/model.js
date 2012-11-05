@@ -14,11 +14,11 @@
 
   clientId
     clientId is temporary session id. It's erased when you close your browser.
-    Itefn47v2hm63h1efn47v2hm63h:'.
+    Its3j7lgxd4ruz1s3j7lgxd4ruz:'.
     For local storage persistence is used este.storage.Local unique-enough ID.
 
   Notes
-    - to modify complex attribute: joe.get(efn47v2hm63h2efn47v2hm63h).add efn47v2hm63h3efn47v2hm63h
+    - to modify complex attribute: joe.get(s3j7lgxd4ruz2s3j7lgxd4ruz).add s3j7lgxd4ruz3s3j7lgxd4ruz
 
   @see ../demos/model.html
 */
@@ -127,8 +127,8 @@ goog.require('goog.ui.IdGenerator');
 
   /**
     Set model attribute(s).
-    model.set efn47v2hm63h22efn47v2hm63h, 1
-    model set efn47v2hm63h23efn47v2hm63h: 1, efn47v2hm63h24efn47v2hm63h: 2
+    model.set s3j7lgxd4ruz22s3j7lgxd4ruz, 1
+    model set s3j7lgxd4ruz23s3j7lgxd4ruz: 1, s3j7lgxd4ruz24s3j7lgxd4ruz: 2
     Invalid values are ignored.
     Dispatch change event with changed property, if any.
     Returns errors.

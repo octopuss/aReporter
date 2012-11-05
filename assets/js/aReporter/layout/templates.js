@@ -4,6 +4,7 @@
 goog.provide('aReporter.layout.templates');
 
 goog.require('soy');
+goog.require('aReporter.activities.templates');
 goog.require('aReporter.tickets.templates');
 
 
@@ -13,7 +14,7 @@ goog.require('aReporter.tickets.templates');
  * @notypecheck
  */
 aReporter.layout.templates.element = function(opt_data) {
-  return '<div class="container-fluid">' + aReporter.layout.templates.navbar(opt_data) + aReporter.layout.templates.metaInfo(opt_data) + '<div class="row-fluid"><div class="span3">' + aReporter.tickets.templates.addTicketFrm(opt_data) + ((opt_data.ticketsLength) ? aReporter.tickets.templates.tickets(opt_data) : '') + '</div><!--/span--><div class="span9">bla</div><!--/span--></div><!--/.row-fluid-->' + aReporter.layout.templates.footer(opt_data) + '</div><!--/.fluid-container-->';
+  return '<div class="container-fluid">' + aReporter.layout.templates.navbar(opt_data) + aReporter.layout.templates.metaInfo(opt_data) + '<div class="row-fluid"><div class="span3">' + aReporter.tickets.templates.addTicketFrm(opt_data) + ((opt_data.ticketsLength) ? aReporter.tickets.templates.tickets(opt_data) : '') + '</div><!--/span--><div class="span9">' + aReporter.activities.templates.addActivityForm(opt_data) + ((opt_data.activitiesLength) ? aReporter.activities.templates.activities(opt_data) : '') + '</div><!--/span--></div><!--/.row-fluid-->' + aReporter.layout.templates.footer(opt_data) + '</div><!--/.fluid-container-->';
 };
 
 

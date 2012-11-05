@@ -1,5 +1,5 @@
 ###*
-  @fileoverview este.demos.app.todomvc.todo.Model.
+  @fileoverview aReporter.domain.Ticket.
 ###
 goog.provide 'aReporter.domain.Ticket'
 

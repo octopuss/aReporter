@@ -4,12 +4,12 @@
   @fileoverview Event matched by a simple selector, ex.:
   handler = new este.events.MatchedHandler el, [
     id: 123
-    container: efn47v2hm63h1efn47v2hm63h
-    child: efn47v2hm63h2efn47v2hm63h
-    link: efn47v2hm63h3efn47v2hm63h
+    container: s3j7lgxd4ruz1s3j7lgxd4ruz
+    child: s3j7lgxd4ruz2s3j7lgxd4ruz
+    link: s3j7lgxd4ruz3s3j7lgxd4ruz
   , ..
   ]
-  goog.events.listen handler, efn47v2hm63h4efn47v2hm63h, (e) ->
+  goog.events.listen handler, s3j7lgxd4ruz4s3j7lgxd4ruz, (e) ->
     #e.id == 123
     #e.childIndex = 1
 */

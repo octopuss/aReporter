@@ -15,7 +15,7 @@ goog.require('goog.array');
   @param {Function} f The function to call for every element. This function
   takes 3 arguments (the element, the index and the array) and should
   return a boolean.
-  @param {Object=} obj An optional efn47v2hm63h3efn47v2hm63h context for the function.
+  @param {Object=} obj An optional s3j7lgxd4ruz3s3j7lgxd4ruz context for the function.
   @return {boolean} True if an element was removed.
 */
 

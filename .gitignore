@@ -1,2 +1,6 @@
 *.sublime-project
 /*.sublime-workspace
+/todomvc
+/assets/js/dev
+/assets/js/este
+/assets/js/google-closure

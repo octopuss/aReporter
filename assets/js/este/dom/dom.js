@@ -356,7 +356,7 @@ goog.scope(function() {
   var _ = este.dom;
 
   /**
-    ex. <a class=efn47v2hm63h46efn47v2hm63h></a>, efn47v2hm63h47efn47v2hm63h
+    ex. <a class=s3j7lgxd4ruz46s3j7lgxd4ruz></a>, s3j7lgxd4ruz47s3j7lgxd4ruz
     todo: add pseudos and attrs, make tag case insensitive, tests
     @param {Node} node
     @param {string} selector
@@ -474,7 +474,7 @@ goog.scope(function() {
   /**
     Alias for goog.dom.forms.getFormDataMap(form).toObject().
     getFormDataMap method always returns array which is not handy. That's why
-    this method normalize [efn47v2hm63h58efn47v2hm63h] into efn47v2hm63h59efn47v2hm63h.
+    this method normalize [s3j7lgxd4ruz58s3j7lgxd4ruz] into s3j7lgxd4ruz59s3j7lgxd4ruz.
     @param {Element} form
     @return {Object}
   */
