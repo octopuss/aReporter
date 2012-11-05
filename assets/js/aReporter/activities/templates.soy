@@ -1,0 +1,70 @@
+{namespace aReporter.activities.templates autoescape="contextual"}
+
+/**
+* Template for adding actvity
+* @param creationDate
+* @param activityTypes
+* @param hours
+* @param invoiced
+*/
+{template .addActivityForm}
+  <div class="well well-small">
+    <p><i class="icon-time"></i>Activity record</p>
+    <form class="form-inline">
+      <input type="text" name="creationDate" value="{$creationDate}" class="span2" placeholder="Date">
+      <input type="text" name="hours" value="{$hours}" class="span1" placeholder="Hours">
+      <select name="activityType" class="span2">
+        {for $i in range($activityTypes)}
+          <option>{$activityTypes[$i]}</option>
+        {/for}
+       </select>
+      <input type="text" name="description" class="span6" placeholder="Title; Description">
+      <label class="checkbox">
+        <input type="checkbox" name="invoiced"{if $invoiced} checked{/if}> Invoiced
+      </label>
+      <button type="submit" class="btn pull-right"><i class="icon-plus-sign"></i></button>
+    </form>
+  </div>
+{/template}
+
+/**
+* Template for listing activities
+* @param activities
+*/
+{template .activities}
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Creation date</th>
+          <th>Hours</th>
+          <th>Type</th>
+          <th>Title; Description</th>
+          <th>Invoiced</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach $activity in $activities}
+          {call .activity data="$activity" /}
+        {/foreach}
+      </tbody>
+    </table>
+{/template}
+
+/**
+* Template for activity renderin
+* @param clientId
+* @param creationDate
+* @param hours
+* @param activityType
+* @param invoiced
+*/
+{template .activity}
+  <tr client-id="{$clientId}">
+    <td>{$creationDate}</td>
+    <td>{$hours}</td>
+    <td>{$activityType}</td>
+    <td>{if $invoiced}<i class="icon-check"></i>{/if}</td>
+    <td><button class="destroy"></button></td>
+  </tr>
+{/template}
