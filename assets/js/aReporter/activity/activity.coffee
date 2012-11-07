@@ -19,16 +19,11 @@ class aReporter.domain.Activity extends este.Model
     Activity types enumeration
     @enum  {String}
   ###
-  ActivityTypeEnum =
+  @ActivityType =
     PROGRAMMING : 'Programming'
     COMMUNICATION : 'Communication'
     TESTING : 'Testing'
     OTHER : 'Other'
-
-  ###*
-    Activity type
-  ###
-  activityType:ActivityTypeEnum
 
   ###*
     @inheritDoc
@@ -39,7 +34,7 @@ class aReporter.domain.Activity extends este.Model
     'date': new Date
     'title':''
     'description':''
-    'type':ActivityTypeEnum.PROGRAMMING
+    'type':@ActivityType.PROGRAMMING
     'invoiced':true
 
   ###*
@@ -57,5 +52,8 @@ class aReporter.domain.Activity extends este.Model
   calculateMD: ->
     hrs = @get 'hours'
     @set md hrs / 8
-  getActivityTypesList:->
-    return ActivityTypeEnum.getValues
+  getActivityTypeList: ->
+    options = []
+    for key, value of @ActivityType
+      options.push value
+    return options

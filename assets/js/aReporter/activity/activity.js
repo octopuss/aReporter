@@ -11,7 +11,6 @@ goog.provide('aReporter.domain.Activity');
 goog.require('este.Model');
 
 
-  var ActivityTypeEnum;
 
   
 
@@ -34,19 +33,12 @@ goog.require('este.Model');
   */
 
 
-  ActivityTypeEnum = {
+  aReporter.domain.Activity.ActivityType = {
     PROGRAMMING: 'Programming',
     COMMUNICATION: 'Communication',
     TESTING: 'Testing',
     OTHER: 'Other'
   };
-
-  /**
-    Activity type
-  */
-
-
-  aReporter.domain.Activity.prototype.activityType = ActivityTypeEnum;
 
   /**
     @inheritDoc
@@ -59,7 +51,7 @@ goog.require('este.Model');
     'date': new Date,
     'title': '',
     'description': '',
-    'type': ActivityTypeEnum.PROGRAMMING,
+    'type': aReporter.domain.Activity.ActivityType.PROGRAMMING,
     'invoiced': true
   };
 
@@ -88,8 +80,15 @@ goog.require('este.Model');
     return this.set(md(hrs / 8));
   };
 
-  aReporter.domain.Activity.prototype.getActivityTypesList = function() {
-    return ActivityTypeEnum.getValues;
+  aReporter.domain.Activity.prototype.getActivityTypeList = function() {
+    var key, options, value, _ref;
+    options = [];
+    _ref = this.ActivityType;
+    for (key in _ref) {
+      value = _ref[key];
+      options.push(value);
+    }
+    return options;
   };
 
   

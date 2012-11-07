@@ -3,8 +3,8 @@
 /**
 * Template for adding actvity
 * @param creationDate
-* @param activityTypes
 * @param hours
+* @param activityTypes
 * @param invoiced
 */
 {template .addActivityForm}
@@ -14,9 +14,9 @@
       <input type="text" name="creationDate" value="{$creationDate}" class="span2" placeholder="Date">
       <input type="text" name="hours" value="{$hours}" class="span1" placeholder="Hours">
       <select name="activityType" class="span2">
-        {for $i in range($activityTypes)}
-          <option>{$activityTypes[$i]}</option>
-        {/for}
+        {foreach $type in $activityTypes}
+          <option value="{$type.type}">{$type.value}</option>
+        {/foreach}
        </select>
       <input type="text" name="description" class="span6" placeholder="Title; Description">
       <label class="checkbox">

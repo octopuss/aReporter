@@ -84,20 +84,29 @@ goog.require('aReporter.layout.templates');
 
 
   aReporter.layout.View.prototype.update = function() {
-    var activity, html, json, ticket;
+    var activity, html, json, key, ticket, type, types, _ref;
     ticket = new aReporter.domain.Ticket({
       title: 'aaa',
       active: true
     });
     activity = new aReporter.domain.Activity;
+    types = [];
+    _ref = aReporter.domain.Activity.ActivityType;
+    for (key in _ref) {
+      type = _ref[key];
+      types.push({
+        type: key,
+        value: type
+      });
+    }
     this.tickets.add(ticket);
     this.activities.add(activity);
     json = {
-      tickets: this.tickets,
+      tickets: this.tickets.toJson(),
       ticketsLength: this.tickets.getLength(),
-      activities: this.activities,
-      activitiesLength: this.activities.getLength(),
-      activityTypes: activity.getActivityTypesList()
+      activities: this.activities.toJson(),
+      activityTypes: types,
+      activitiesLength: this.activities.getLength()
     };
     html = aReporter.layout.templates.element(json);
     return this.mergeHtml(html);

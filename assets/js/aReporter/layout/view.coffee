@@ -58,13 +58,17 @@ class aReporter.layout.View extends este.app.View
   update:->
     ticket = new aReporter.domain.Ticket title:'aaa', active:true
     activity = new aReporter.domain.Activity
+    types = []
+    for key,type of aReporter.domain.Activity.ActivityType
+      types.push {type:key,value:type}
+      #types.push aReporter.domain.Activity.ActivityType[type]
     @tickets.add ticket
     @activities.add activity
     json =
-      tickets: @tickets
+      tickets: @tickets.toJson()
       ticketsLength: @tickets.getLength()
-      activities: @activities
+      activities: @activities.toJson()
+      activityTypes: types
       activitiesLength:@activities.getLength()
-      activityTypes: activity.getActivityTypesList()
     html = aReporter.layout.templates.element json
     @mergeHtml html
